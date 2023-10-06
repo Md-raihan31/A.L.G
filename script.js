@@ -5,8 +5,8 @@ const fs = require('fs');
 
 const hostname = '127.0.0.1';
 const port = 6969;
-const home = fs.readilesync('index.html')
-const server = http.createServer((req, res)=>{
+const home = fs.readFileSync(./index.html)
+const server = http.createserver((req, res)=>{
 console.log(req.url)
 res.statusCode = 200;
 res.setHeader('Content-Type', 'text/html');
