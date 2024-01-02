@@ -1,7 +1,12 @@
-OP VERYFIE
+<?php
+$otp=rand(00000,99999);
+?>
 
-<form>
+OTP VERYFIE
+
+<form action="otp.php" method="post">
   <input type="email" name="email" placeholder="enter new email" required>
-  <button> type="submit">veryfie</button>
-  
+  <input type="hidden" name="otp" value="<?php echo $otp; ?>">
+  <button type="submit">veryfie</button>
+
 </form>
