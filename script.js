@@ -38,3 +38,16 @@ res.end(‘Hello  world’);
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
   });
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBr-O_Ou__j9yrTj4YSxCm4v5J2rAHIST8",
+  authDomain: "alcwebsite-711f7.firebaseapp.com",
+  projectId: "alcwebsite-711f7",
+  storageBucket: "alcwebsite-711f7.firebasestorage.app",
+  messagingSenderId: "1097855001452",
+  appId: "1:1097855001452:web:07ba16df38c3aa09c1c949",
+  measurementId: "G-BQ9NBTETX9"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
