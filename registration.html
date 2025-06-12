@@ -95,3 +95,44 @@
 
 
 </form>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBr-O_Ou__j9yrTj4YSxCm4v5J2rAHIST8",
+  authDomain: "alcwebsite-711f7.firebaseapp.com",
+  projectId: "alcwebsite-711f7",
+  storageBucket: "alcwebsite-711f7.firebasestorage.app",
+  messagingSenderId: "1097855001452",
+  appId: "1:1097855001452:web:07ba16df38c3aa09c1c949",
+   };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  function signUp() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    auth.createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        alert("Sign-up successful!");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
+
+  function signIn() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        alert("Sign-in successful!");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
+</script>
